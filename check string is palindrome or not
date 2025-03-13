@@ -1,0 +1,30 @@
+#Approach-1
+def is_palindrome(s):
+    s = s.lower().replace(" ", "")  
+    return s == s[::-1]  
+
+# Example usage
+string = input("Enter a string: ")
+if is_palindrome(string):
+    print("It's a palindrome!")
+else:
+    print("It's not a palindrome.")
+
+
+#Approach-2
+def is_palindrome(s):
+    s = s.lower().replace(" ", "")  
+    left, right = 0, len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    
+    return True
+string = input("Enter a string: ")
+if is_palindrome(string):
+    print("It's a palindrome!")
+else:
+    print("It's not a palindrome.")
+
