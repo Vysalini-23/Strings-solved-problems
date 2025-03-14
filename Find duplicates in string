@@ -1,0 +1,32 @@
+#without using sorting method
+def duplicates(s):
+    char_count={}
+    for char in s:
+        char_count[char]=char_count.get(char,0)+1 
+    for char,count in char_count.items():
+        if count>1:
+            print(f"{char}, count ={count}")
+s=input()
+duplicates(s)
+
+
+
+#by using sorting method
+
+def find_duplicates_sorted(s):
+    s = "".join(sorted(s)) 
+    duplicates = {}  
+
+    i = 0
+    while i < len(s) - 1:
+        count = 1
+        while i < len(s) - 1 and s[i] == s[i + 1]:  
+            count += 1
+            i += 1
+        if count > 1:
+            duplicates[s[i]] = count
+        i += 1  
+    for char, count in duplicates.items():
+        print(f"{char}, count = {count}")
+S = "geeksforgeeks"
+find_duplicates_sorted(S)
