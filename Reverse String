@@ -6,3 +6,63 @@ def reverseString(s):
 s = ["h", "e", "l", "l", "o"]
 reverseString(s)
 print(s)  
+
+s=input()
+output=''
+i=len(s)-1
+while i>=0:
+    output=output+s[i]
+    i-=1 
+print(output)
+
+s=input()
+output=''
+l=s.split()
+l=" ".join(l)
+i=len(l)-1
+while i>=0:
+    output=output+l[i]
+    i-=1 
+print(output)
+
+i/p: python is easy
+o/p:ysae si nohtyp
+
+
+s=input()
+s=s.split()
+l=s[::-1]
+#print(l)
+op=" ".join(l)
+print(op)
+
+i/p:python is easy
+o/p:easy is python
+
+s=input()
+l=s.split()
+l1=[]
+for word in l:
+    l1.append(word[::-1])
+output=" ".join(l1)
+print(output)
+
+i/p:python is easy
+o/p:nohtyp si ysae
+
+
+s=input()
+l=s.split()
+i=0
+l1=[]
+while i<len(l):
+    if i%2==0:
+       l1.append(l[i])
+    else:
+        l1.append(l[i][::-1])
+    i+=1
+output=" ".join(l1)
+print(output)
+
+i/p: one two three four five six
+o/p: one owt three ruof five xis
